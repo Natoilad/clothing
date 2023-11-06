@@ -1,0 +1,82 @@
+.service_page {
+  text-align: center;
+  background: {
+    image: url(../images/bg/service_page_bg.jpg);
+    size: cover;
+    repeat: no-repeat;
+    position: center;
+    color: #2f303a;
+  }
+  font-family: Montserrat;
+  h1 {
+    @include font(36px, 500);
+    text-transform: uppercase;
+    margin: 100px auto;
+  }
+  &_list {
+    // background-image: url(../images/bg/usa_bg.png);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    padding-top: 0;
+    color: #000;
+    &_item {
+      padding-top: 100px;
+      @include desktop {
+        display: flex;
+      }
+    }
+    &_text_wrapper {
+      background-color: rgba(255, 255, 255, 0.7) !important;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: center;
+      @include desktop {
+        align-items: flex-start;
+        padding: 0 30px;
+      }
+
+      h2 {
+        @include font(26px, 500);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+      p {
+        @include desktop {
+          text-align: start;
+        }
+        margin-bottom: 20px;
+      }
+      a {
+        @include font(10px, 600);
+        text-transform: uppercase;
+        color: var(--primery-text-color);
+        background-color: var(--brend-color);
+        padding: 10px;
+        border-radius: 4px;
+      }
+      a:hover {
+        color: #000;
+      }
+    }
+
+    img {
+      margin: 20px auto;
+      width: 100%;
+      @include tablet {
+        width: 70%;
+      }
+      @include desktop {
+        margin: 0;
+      }
+    }
+  }
+
+  .content-item {
+    display: block;
+    padding: 100px 0;
+  }
+}

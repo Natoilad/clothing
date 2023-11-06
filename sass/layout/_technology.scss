@@ -1,0 +1,62 @@
+.technology {
+  text-align: center;
+  @include tablet {
+    text-align: start;
+  }
+  h2 {
+    margin: 0 auto;
+  }
+}
+
+.technology-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  @include desktop {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+}
+
+.technology__icon {
+  @extend%flex-just;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--brend-color);
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.technology__icon-pick {
+  width: 70px;
+  height: 70px;
+}
+
+.technology-list__item {
+  width: 100%;
+
+  @include tablet {
+    width: 354px;
+  }
+}
+
+.technology__title {
+  @include font(20px, 500);
+  line-height: 1.14;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--color-text-dark-theme);
+}
+
+.technology__paragraph {
+  line-height: 1.71;
+  color: var(--secondary-text-color);
+}
+
+.technology__icon__img {
+  margin-bottom: 25px;
+}

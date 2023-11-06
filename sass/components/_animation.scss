@@ -1,0 +1,131 @@
+// 3D rotate
+@keyframes initialRotate {
+  0% {
+    transform: rotate3d(1, 1, 1, 0deg);
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, 720deg);
+  }
+}
+
+.usa_cars_offer_mobile_desktop,
+.clock_icon_anime {
+  animation: initialRotate 3s forwards;
+}
+
+// rotateY
+@keyframes rotateAnimation {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(1080deg);
+  }
+}
+// .usa_cars__title {
+//   animation: rotateAnimation 2s forwards;
+// }
+// pulse
+@keyframes softPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+.button-active {
+  animation: softPulse 2s infinite;
+}
+@keyframes softPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+.telegram_link {
+  animation: softPulse 4s infinite;
+}
+// rotateZ
+@keyframes rotateAnimationZ {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(1080deg);
+  }
+}
+.open-mobile-menu-btn img,
+#scrollToTopBtn,
+.logo-up_icon {
+  animation: rotateAnimationZ 2s forwards;
+}
+// ModalAnimation
+@keyframes mobileModalAnimation {
+  0% {
+    opacity: 0;
+    width: 50%;
+    height: 50%;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 300px;
+    height: 100%;
+    margin-top: 20px;
+  }
+}
+@keyframes tabletModalAnimation {
+  0% {
+    opacity: 0;
+    width: 50%;
+    height: 50%;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 700px;
+    height: 500px;
+    margin-top: 20px;
+  }
+}
+@keyframes desktopModalAnimation {
+  0% {
+    opacity: 0;
+    width: 0%;
+    height: 0%;
+    margin-top: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 840px;
+    height: 526px;
+    margin-top: 20px;
+  }
+}
+.modal {
+  opacity: 0;
+  width: 0%;
+  height: 0%;
+  animation: mobileModalAnimation 1.5s forwards;
+}
+@include tablet {
+  .modal {
+    opacity: 0;
+    width: 0%;
+    height: 0%;
+    animation: tabletModalAnimation 1.5s forwards;
+  }
+}
+@include desktop {
+  .modal {
+    opacity: 0;
+    width: 0%;
+    height: 0%;
+    animation: desktopModalAnimation 1.5s forwards;
+  }
+}

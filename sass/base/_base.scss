@@ -1,0 +1,86 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-size: 16px;
+  text-transform: uppercase;
+  @include desktop {
+    font-size: 26px;
+  }
+}
+p {
+  font-style: normal;
+  line-height: normal;
+}
+
+ul,
+li {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+img {
+  display: block;
+  min-height: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+.link-active {
+  color: var(--brend-color);
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 30px;
+    background-color: var(--brend-color);
+    border-radius: 2px;
+  }
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', Alternates;
+  @include font(18px, 400);
+  letter-spacing: 0.03em;
+  color: var(--primery-text-color);
+}

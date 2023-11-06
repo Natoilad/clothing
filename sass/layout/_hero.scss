@@ -1,0 +1,143 @@
+$hero-bg-color: rgba(47, 48, 58, 0.4);
+.hero {
+  padding-top: 100px;
+  background: {
+    image: linear-gradient($hero-bg-color, $hero-bg-color),
+      url(../images/bg/hero-bg-mobile.jpg);
+    size: cover;
+    repeat: no-repeat;
+    position: center;
+    color: #2f303a;
+  }
+  text-align: center;
+  @include tablet {
+    background-image: linear-gradient($hero-bg-color, $hero-bg-color),
+      url(../images/bg/hero-bg-tablet.jpg);
+    padding: 118px 0;
+  }
+
+  @include desktop {
+    background-image: linear-gradient($hero-bg-color, $hero-bg-color),
+      url(../images/bg/hero-bg-desktop.jpg);
+    padding: 100px 0;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    & {
+      @media (max-width: 767px) {
+        background-image: linear-gradient($hero-bg-color, $hero-bg-color),
+          url(../images/bg/hero-bg-mobile@2x.jpg);
+      }
+      @media (min-width: 768px) {
+        background-image: linear-gradient($hero-bg-color, $hero-bg-color),
+          url(../images/bg/hero-bg-tablet@2x.jpg);
+      }
+      @media (min-width: 1200px) {
+        background-image: linear-gradient($hero-bg-color, $hero-bg-color),
+          url(../images/bg/hero-bg-desktop@2x.jpg);
+      }
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-top: 15px;
+    color: var(--primery-text-color);
+    @include font(26px, 500);
+    line-height: 1.62;
+    margin: 0 auto;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    @include tablet {
+      text-align: center;
+      width: 360px;
+    }
+
+    @include desktop {
+      @include font(50px, 900);
+      line-height: 1.36;
+      margin: 0;
+      text-align: start;
+      width: 500px;
+    }
+    &_sub {
+      text-align: center;
+      @include desktop {
+        text-align: start;
+        margin-bottom: 80px;
+      }
+      li {
+        margin-bottom: 12px;
+      }
+      &_wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 10px;
+        @include desktop {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+  &_address {
+    &_wrapper {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      padding: 20px;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(5px);
+      margin: 0 auto 20px;
+      max-width: 400px;
+      @include desktop {
+        margin: 20px 0;
+        height: 120px;
+      }
+      a {
+        color: var(--primery-text-color);
+      }
+    }
+    &_container {
+      @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 20px;
+        margin: 20px 0;
+      }
+    }
+  }
+  &_discount_img {
+    &_mobile {
+      position: relative;
+      width: 80px;
+      right: -75%;
+      margin-top: -50px;
+      @include desktop {
+        display: none;
+      }
+    }
+    &_desktop {
+      display: none;
+      @include desktop {
+        display: block;
+        margin-top: -275px;
+        margin-right: -50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .hero_discount_img_desktop {
+    margin-right: 50px;
+  }
+}

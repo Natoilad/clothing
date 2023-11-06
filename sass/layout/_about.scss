@@ -1,0 +1,207 @@
+$hero-bg-color: rgba(47, 48, 58, 0.4);
+
+.about {
+  padding-bottom: 60px;
+  background: {
+    image: url(../images/bg/about_bg_desktop.jpg);
+    size: cover;
+    repeat: no-repeat;
+    position: center;
+    color: #2f303a;
+  }
+  h1 {
+    font-family: Montserrat;
+    font-style: normal;
+    line-height: 140%;
+    text-transform: uppercase;
+    @include desktop {
+      text-align: start;
+      @include font(50px, 600);
+    }
+  }
+  text-align: center;
+  p {
+    font-style: normal;
+    line-height: normal;
+
+    @include desktop {
+      max-width: 500px;
+      text-align: start;
+    }
+  }
+  .container {
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &_title_wrapper {
+    @include desktop {
+      width: 50%;
+      margin-bottom: 50px;
+    }
+    &_text {
+      @include desktop {
+        display: flex;
+        align-items: flex-end;
+        padding-left: 200px;
+      }
+      p {
+        width: 100%;
+        font-style: normal;
+        line-height: normal;
+        text-transform: uppercase;
+        padding: 20px;
+        padding-right: 0;
+        border-left: 1px solid var(--brend-color);
+      }
+    }
+    button {
+      margin-top: 50px;
+      background-color: var(--brend-color);
+    }
+  }
+  &_description {
+    .container {
+      @include desktop {
+        display: flex;
+        gap: 60px;
+        justify-content: space-between;
+      }
+    }
+    &_img {
+      width: 100%;
+      margin-bottom: 30px;
+      @include desktop {
+        margin-right: 60px;
+      }
+    }
+    &_text {
+      display: flex;
+
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    p {
+      color: #00193e;
+      text-align: center;
+      font-style: normal;
+      line-height: 140%;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      @include desktop {
+        text-align: start;
+        @include font(26px, 500);
+      }
+    }
+  }
+  &_difference {
+    padding-bottom: 60px;
+    text-align: center;
+    background: {
+      image: url(../images/bg/difference.jpg);
+      size: cover;
+      repeat: no-repeat;
+      position: center;
+      color: #2f303a;
+    }
+
+    &_wrapper {
+      margin-bottom: 20px;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 30px 20px;
+      flex-wrap: wrap;
+      @include desktop {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 470px;
+        text-align: start;
+        gap: 30px;
+      }
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      color: #00193e;
+      font-style: normal;
+      line-height: 140%;
+      text-transform: uppercase;
+      display: inline-block;
+      border-bottom: 1px solid var(--brend-color);
+      @include desktop {
+        @include font(50px, 600);
+        margin-bottom: 50px;
+      }
+    }
+
+    &_list {
+      color: #00193e;
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+      img {
+        margin-bottom: 20px;
+      }
+      h3 {
+        color: #000;
+        font-family: Montserrat;
+        @include font(18px, 400);
+        text-align: center;
+        font-style: normal;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        @include desktop {
+          text-align: start;
+        }
+      }
+    }
+  }
+  &_bonus {
+    text-align: center;
+    color: #000;
+  }
+  &_partners {
+    background-color: #efefef;
+    font-family: Montserrat;
+    text-align: center;
+    color: #00193e;
+    font-style: normal;
+    line-height: normal;
+    text-transform: uppercase;
+
+    h3 {
+      @include font(50px, 600);
+      line-height: 140%; /* 70px */
+    }
+    p {
+      margin-bottom: 30px;
+    }
+
+    ul {
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+      @include desktop {
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        width: 750px;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      li {
+        margin-bottom: 30px;
+        img {
+          margin: 0 auto;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
