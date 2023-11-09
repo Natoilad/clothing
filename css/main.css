@@ -1,5 +1,5 @@
 :root {
-  --brend-color: #ff9800;
+  --brend-color: #e67317;
   --primery-text-color: #fff;
   --secondary-text-color: #757575;
   --color-text-dark-theme: #565c5f;
@@ -278,13 +278,16 @@ body {
 }
 
 .modal__btn-send {
+  width: 100px;
+  height: 50px;
   padding: 5px;
   position: relative;
   top: 60px;
-  border-radius: 100%;
-  background: var(--brend-color);
+  border-radius: 10px;
+  background: var(--primery-text-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-color: transparent;
+  color: var(--brend-color);
 }
 @media screen and (min-width: 768px) {
   .modal__btn-send {
@@ -295,9 +298,8 @@ body {
 @media screen and (min-width: 1200px) {
   .modal__btn-send {
     padding: 10px;
-    scale: 1.6;
     position: absolute;
-    top: 92%;
+    top: 82%;
     right: 45%;
   }
 }
@@ -423,7 +425,7 @@ body {
 
 .modal {
   background: transparent;
-  background-image: url(../images/svg/modal_bg_mobile.svg);
+  background-color: var(--brend-color);
   background-repeat: no-repeat;
   background-size: contain;
   width: 300px;
@@ -435,6 +437,9 @@ body {
   padding-bottom: 50px;
   border-radius: 4px;
   text-align: center;
+}
+.modal p {
+  color: var(--primery-text-color);
 }
 @media screen and (min-width: 350px) {
   .modal {
@@ -455,7 +460,7 @@ body {
     padding: 40px;
     text-align: left;
     background-color: transparent;
-    background-image: url(../images/svg/modal_bg.svg);
+    background-color: var(--brend-color);
     width: 840px;
     padding-bottom: 100px;
     background-size: cover;
@@ -485,7 +490,7 @@ body {
 }
 
 .modal__close-icon {
-  fill: #878787;
+  fill: var(--primery-text-color);
   transition: fill var(--transition-dur-fun);
 }
 .modal__btn-close:hover .modal__close-icon, .modal__btn-close:focus .modal__close-icon {
@@ -518,7 +523,7 @@ body {
 
 .modal__label-title {
   text-align: center;
-  color: #00193e;
+  color: var(--primery-text-color);
   font-style: normal;
   line-height: normal;
   padding-bottom: 10px;
@@ -684,7 +689,7 @@ textarea {
   z-index: 99;
   width: 100%;
   height: 100%;
-  background: rgb(86, 92, 95);
+  background: rgba(0, 25, 62, 0.7);
   backdrop-filter: blur(10px);
   transform: translateY(-1500px);
   pointer-events: none;
@@ -697,6 +702,7 @@ textarea {
 }
 
 .mobile-menu-list {
+  padding-top: 30px;
   display: flex;
   gap: 5px;
   flex-direction: column;
@@ -722,8 +728,8 @@ textarea {
 
 .mobile-menu__close-btn {
   position: absolute;
-  top: 20px;
-  right: 14px;
+  top: 10px;
+  right: 5px;
   border: none;
   padding: 0;
   line-height: 0;
@@ -899,6 +905,10 @@ textarea {
   }
 }
 
+.menu-nav {
+  display: none;
+}
+
 @media screen and (min-width: 768px) {
   .menu-nav {
     display: flex;
@@ -938,8 +948,6 @@ textarea {
 }
 @media screen and (min-width: 1200px) {
   .menu-nav__link {
-    font-size: 18px;
-    font-weight: 400;
     line-height: 1.14;
     letter-spacing: 0.02em;
     padding-top: 32px;
@@ -1004,6 +1012,8 @@ textarea {
   }
 }
 .open-mobile-menu-btn {
+  scale: 1.5;
+  color: var(--brend-color);
   border: none;
   background-color: transparent;
   padding: 0;
@@ -1022,7 +1032,7 @@ textarea {
 }
 .hero {
   padding-top: 100px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/hero-bg-mobile.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(https://www.awesomealterations.site/images/smokingman.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1031,31 +1041,32 @@ textarea {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/hero-bg-tablet.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(https://www.awesomealterations.site/images/smokingman.jpg);
     padding: 118px 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/hero-bg-desktop.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(https://www.awesomealterations.site/images/smokingman.jpg);
     padding: 100px 0;
+    padding-top: 250px;
     max-width: 1600px;
     margin: 0 auto;
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/hero-bg-mobile@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(https://www.awesomealterations.site/images/smokingman.jpg);
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/hero-bg-tablet@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(https://www.awesomealterations.site/images/smokingman.jpg);
   }
 }
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/hero-bg-desktop@2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(https://www.awesomealterations.site/images/smokingman.jpg);
   }
 }
 .hero__title {
@@ -1072,7 +1083,6 @@ textarea {
 @media screen and (min-width: 768px) {
   .hero__title {
     text-align: center;
-    width: 360px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1080,9 +1090,9 @@ textarea {
     font-size: 50px;
     font-weight: 900;
     line-height: 1.36;
-    margin: 0;
-    text-align: start;
-    width: 500px;
+    margin-right: 0;
+    text-align: end;
+    width: 650px;
   }
 }
 .hero__title_sub {
@@ -1106,7 +1116,7 @@ textarea {
 @media screen and (min-width: 1200px) {
   .hero__title_sub_wrapper {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 }
 .hero_address_wrapper {
@@ -1176,6 +1186,10 @@ textarea {
 .technology h2 {
   margin: 0 auto;
 }
+.technology p {
+  color: #000;
+  text-align: center;
+}
 
 .technology-list {
   display: flex;
@@ -1236,14 +1250,14 @@ textarea {
 .service_section {
   text-align: center;
   background-color: #2f303a;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.7)), url(../images/bg/service_bg_mobile.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.7)), url(https://www.awesomealterations.site/images/jacket-man-p.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 @media screen and (min-width: 1200px) {
   .service_section {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/service_bg_desktop.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(https://www.awesomealterations.site/images/jacket-man-p.jpg);
   }
 }
 .service_section__title {
@@ -1297,6 +1311,8 @@ textarea {
   color: #000;
 }
 .service_link:hover .service_img_container {
+  transition: transform 0.8s ease;
+  transform: scale(1.05);
   background-color: var(--brend-color);
   color: #ffffff;
   box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
@@ -1358,6 +1374,11 @@ textarea {
 }
 .testimonial_link:hover {
   border-bottom: 2px solid var(--brend-color);
+}
+
+.block__link-image {
+  height: 56px;
+  width: 56px;
 }
 
 .usa {
@@ -1671,7 +1692,7 @@ textarea {
   background-color: #efefef;
   font-family: Montserrat;
   text-align: center;
-  color: #00193e;
+  color: var(--brend-color);
   font-style: normal;
   line-height: normal;
   text-transform: uppercase;
@@ -2515,7 +2536,7 @@ textarea {
 
 .service_page {
   text-align: center;
-  background-image: url(../images/bg/service_page_bg.jpg);
+  background-image: url(https://www.awesomealterations.site/images/jacket-man-p.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -2703,6 +2724,7 @@ textarea {
   }
 }
 .modal {
+  color: #fff;
   opacity: 0;
   width: 0%;
   height: 0%;
