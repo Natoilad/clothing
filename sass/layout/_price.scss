@@ -9,9 +9,10 @@
   }
 
   &_accordion {
-    @include desktop {
-      display: none;
-    }
+    // width: 50%;
+    // @include desktop {
+    //   display: none;
+    // }
   }
   h1 {
     margin-top: 250px;

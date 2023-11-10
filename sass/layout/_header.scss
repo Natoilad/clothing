@@ -12,10 +12,14 @@
   }
   &__conteiner {
     display: flex;
+    // flex-direction: column;
     align-items: center;
     justify-content: space-between;
     padding-left: 15px;
     padding-right: 15px;
+    @include desktop {
+      flex-direction: row;
+    }
   }
   @include tablet {
     .container {
@@ -148,5 +152,11 @@
 @media screen and (min-width: 768px) {
   .open-mobile-menu-btn {
     display: none;
+  }
+}
+.fld {
+  flex-direction: column;
+  @include desktop {
+    flex-direction: row;
   }
 }

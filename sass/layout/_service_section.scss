@@ -70,8 +70,9 @@
     color: #000;
 
     &:hover .service_img_container {
-      transition: transform 0.8s ease;
-      transform: scale(1.05);
+      transition: transform 0.5s ease, background-color 0.1s ease,
+        color 0.5s ease;
+      transform: scale(1.03);
       background-color: var(--brend-color);
       color: #ffffff;
       box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);

@@ -895,6 +895,11 @@ textarea {
   padding-left: 15px;
   padding-right: 15px;
 }
+@media screen and (min-width: 1200px) {
+  .vivat-header__conteiner {
+    flex-direction: row;
+  }
+}
 @media screen and (min-width: 768px) {
   .vivat-header .container {
     display: flex;
@@ -1030,6 +1035,15 @@ textarea {
     display: none;
   }
 }
+.fld {
+  flex-direction: column;
+}
+@media screen and (min-width: 1200px) {
+  .fld {
+    flex-direction: row;
+  }
+}
+
 .hero {
   padding-top: 100px;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(https://www.awesomealterations.site/images/smokingman.jpg);
@@ -1311,8 +1325,8 @@ textarea {
   color: #000;
 }
 .service_link:hover .service_img_container {
-  transition: transform 0.8s ease;
-  transform: scale(1.05);
+  transition: transform 0.5s ease, background-color 0.1s ease, color 0.5s ease;
+  transform: scale(1.03);
   background-color: var(--brend-color);
   color: #ffffff;
   box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
@@ -2403,11 +2417,6 @@ textarea {
   background-repeat: no-repeat;
   background-position: center;
   background-color: #2f303a;
-}
-@media screen and (min-width: 1200px) {
-  .price_accordion {
-    display: none;
-  }
 }
 .price h1 {
   margin-top: 250px;
