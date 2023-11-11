@@ -4,7 +4,7 @@
     closeMenuBtn: document.querySelector('[data-menu-close]'),
     menu: document.querySelector('[data-menu]'),
     mobMenu: document.querySelector('.mobile-menu'),
-    header: document.querySelector('.vivat-header'),
+    header: document.querySelector('.clothing-header'),
   };
 
   refs.openMenuBtn.addEventListener('click', toggleModal);

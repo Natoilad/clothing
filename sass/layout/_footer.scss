@@ -1,5 +1,5 @@
 .vivat-footer {
-  background-image: url(../images/bg/footer_bg.jpg);
+  background-image: url('../images/footer.png');
   background: {
     size: cover;
     repeat: no-repeat;
@@ -23,7 +23,7 @@
 
   @include desktop {
     .container {
-      align-items: baseline;
+      align-items: flex-start;
       column-gap: normal;
     }
 

@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
   accordionItems.forEach(item => {
     item.addEventListener('click', function () {
       let targetId = this.getAttribute('data-target');
-      let targetContent = document.getElementById(targetId);
+      // let targetContent = document.getElementById(targetId);
       let wasActive = this.classList.contains('active');
 
       accordionItems.forEach(i => {
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (!wasActive) {
         this.classList.add('active');
-        targetContent.classList.remove('hidden');
+        // targetContent.classList.remove('hidden');
       }
     });
   });
