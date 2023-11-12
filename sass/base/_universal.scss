@@ -1,0 +1,14 @@
+@media screen and (min-width: 1200px) {
+  .contact_wrraper {
+    // max-width: 600px;
+  }
+  .btn_link {
+    color: #000;
+  }
+  .cont_link:hover {
+    scale: 1.1;
+  }
+  .list-contact-link:hover {
+    color: var(--brend-color);
+  }
+}
