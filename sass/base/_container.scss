@@ -9,13 +9,18 @@
   .container {
     margin-left: auto;
     margin-right: auto;
-    width: 480px;
+    width: 450px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    width: 738px;
+  }
+}
+@media screen and (min-width: 968px) {
+  .container {
+    width: 938px;
   }
 }
 

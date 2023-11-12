@@ -107,6 +107,9 @@
   height: 45px;
   @include tablet {
     scale: 1.2;
+    margin-right: 20px;
+  }
+  @include desktop {
     margin-right: 100px;
   }
 }
