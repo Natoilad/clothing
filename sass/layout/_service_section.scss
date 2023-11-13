@@ -1,7 +1,7 @@
 .service_section {
   text-align: center;
+  // color: #2f303a;
   background: {
-    color: #2f303a;
     image: linear-gradient(rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.7)),
       url('../images/jacket-man.jpg');
     size: cover;
@@ -86,6 +86,7 @@
     &_container {
       box-sizing: border-box;
       width: 315px;
+      min-height: 200px;
       padding: 20px;
 
       @include tablet {
@@ -101,6 +102,7 @@
     }
 
     &_title {
+      text-transform: uppercase;
       @include font(18px, 600);
       margin-bottom: 10px;
     }
@@ -151,6 +153,6 @@
   background-size: cover;
   &:hover {
     z-index: 99;
-    scale: 2;
+    // scale: 2;
   }
 }
