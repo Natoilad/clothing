@@ -103,6 +103,8 @@
   }
 }
 .logo-up_icon {
+  position: relative;
+  z-index: 999;
   width: 50px;
   height: 45px;
   @include tablet {

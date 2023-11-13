@@ -3,7 +3,7 @@ $hero-bg-color: rgba(47, 48, 58, 0.4);
   padding-top: 100px;
   background: {
     image: linear-gradient($hero-bg-color, $hero-bg-color),
-      url('../../images/bg.png');
+      url('../images/bg.png');
     size: cover;
     repeat: no-repeat;
     position: center;
@@ -12,14 +12,14 @@ $hero-bg-color: rgba(47, 48, 58, 0.4);
   text-align: center;
   @include tablet {
     background-image: linear-gradient($hero-bg-color, $hero-bg-color),
-      url('https://www.awesomealterations.site/images/smokingman.jpg');
+      url('../images/smokingman.jpg');
     padding: 118px 0;
     padding-top: 250px;
   }
 
   @include desktop {
     background-image: linear-gradient($hero-bg-color, $hero-bg-color),
-      url('https://www.awesomealterations.site/images/smokingman.jpg');
+      url('../images/smokingman.jpg');
     padding: 100px 0;
     padding-top: 250px;
     max-width: 1600px;
@@ -32,15 +32,15 @@ $hero-bg-color: rgba(47, 48, 58, 0.4);
     & {
       @media (max-width: 767px) {
         background-image: linear-gradient($hero-bg-color, $hero-bg-color),
-          url('https://www.awesomealterations.site/images/smokingman.jpg');
+          url('../images/smokingman.jpg');
       }
       @media (min-width: 768px) {
         background-image: linear-gradient($hero-bg-color, $hero-bg-color),
-          url('https://www.awesomealterations.site/images/smokingman.jpg');
+          url('../images/smokingman.jpg');
       }
       @media (min-width: 1200px) {
         background-image: linear-gradient($hero-bg-color, $hero-bg-color),
-          url('https://www.awesomealterations.site/images/smokingman.jpg');
+          url('../images/smokingman.jpg');
       }
     }
   }

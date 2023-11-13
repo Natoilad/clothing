@@ -1,10 +1,9 @@
 .service_section {
   text-align: center;
-
   background: {
     color: #2f303a;
     image: linear-gradient(rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.7)),
-      url(https://www.awesomealterations.site/images/jacket-man-p.jpg);
+      url('../images/jacket-man.jpg');
     size: cover;
     position: center;
     repeat: no-repeat;
@@ -15,7 +14,9 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(https://www.awesomealterations.site/images/jacket-man-p.jpg);
+      url('../images/jacket-man.jpg');
+    max-width: 1600px;
+    margin: 0 auto;
   }
 
   &__title {
@@ -67,15 +68,15 @@
   &_link {
     padding: 10px 0;
     text-decoration: none;
-    color: #000;
+    color: #fff;
 
     &:hover .service_img_container {
       transition: transform 0.5s ease, background-color 0.1s ease,
         color 0.5s ease;
       transform: scale(1.03);
-      background-color: var(--brend-color);
+      // background-color: var(--brend-color);
       color: #ffffff;
-      box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
+      // box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.75);
     }
   }
 
@@ -143,4 +144,13 @@
 .block__link-image {
   height: 56px;
   width: 56px;
+}
+
+.one {
+  position: relative;
+  background-size: cover;
+  &:hover {
+    z-index: 99;
+    scale: 2;
+  }
 }

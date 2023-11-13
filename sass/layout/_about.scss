@@ -10,6 +10,8 @@ $hero-bg-color: rgba(47, 48, 58, 0.4);
     color: #2f303a;
     padding-top: 200px;
   }
+  max-width: 1600px;
+  margin: 0 auto;
   h1 {
     margin-top: 100px;
     font-family: Montserrat;
@@ -114,6 +116,8 @@ $hero-bg-color: rgba(47, 48, 58, 0.4);
       position: center;
       color: #2f303a;
     }
+    max-width: 1600px;
+    margin: 0 auto;
 
     &_wrapper {
       margin-bottom: 20px;
@@ -228,5 +232,23 @@ $hero-bg-color: rgba(47, 48, 58, 0.4);
   .map {
     width: 500px;
     height: 100%;
+  }
+}
+$hero-bg-color: rgba(47, 48, 58, 0.4);
+
+.ten {
+  color: var(--primery-text-color) !important;
+  background: {
+    image: linear-gradient($hero-bg-color, $hero-bg-color),
+      url('../images/alteration_bg.jpg');
+    size: cover;
+    repeat: no-repeat;
+    position: center;
+    color: #2f303a;
+  }
+  max-width: 1600px;
+  margin: 0 auto;
+  p {
+    color: var(--primery-text-color);
   }
 }
