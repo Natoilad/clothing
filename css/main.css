@@ -21,7 +21,7 @@
   overflow: hidden;
 }
 
-.technology__icon, .polity, .modal__btn-close, .button-nav {
+.technology__icon, .button-nav {
   display: flex;
   justify-content: center;
 }
@@ -36,6 +36,24 @@
 }
 .btn_link {
   color: #000;
+}
+
+.link_contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.look_title {
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.look_p {
+  font-size: 14px !important;
+  text-align: center !important;
 }
 
 *,
@@ -65,7 +83,7 @@ h5 {
   font-size: 16px;
   text-transform: uppercase;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   h2,
   h3,
   h4,
@@ -95,6 +113,7 @@ li {
 }
 
 img {
+  max-width: 100%;
   display: block;
   min-height: 100%;
   height: auto;
@@ -167,7 +186,7 @@ body {
     width: 938px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .container {
     width: 1200px;
   }
@@ -312,7 +331,7 @@ body {
     top: 75px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .modal__btn-send {
     padding: 10px;
     position: absolute;
@@ -324,7 +343,7 @@ body {
   scale: 0.9;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .modal__btn-send:hover {
     scale: 1.8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -391,7 +410,7 @@ body {
   align-items: center;
   margin-bottom: 20px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .button_container {
     flex-direction: row;
   }
@@ -421,281 +440,6 @@ body {
 .top_up_img {
   transform: rotate(90deg);
   width: 50px;
-}
-
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity var(--transition-dur-fun), visibility var(--transition-dur-fun);
-}
-.backdrop.is-hidden {
-  display: none;
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.modal {
-  background: transparent;
-  background-color: var(--brend-color);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 300px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 40px;
-  padding-bottom: 50px;
-  border-radius: 4px;
-  text-align: center;
-}
-.modal p {
-  color: var(--primery-text-color);
-}
-@media screen and (min-width: 350px) {
-  .modal {
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 50px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .modal {
-    padding: 40px;
-    width: 80%;
-    background-color: var(--brend-color);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .modal {
-    padding: 40px;
-    text-align: left;
-    background-color: transparent;
-    background-color: var(--brend-color);
-    width: 840px;
-    padding-bottom: 100px;
-    background-size: cover;
-    padding-bottom: 150px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .modal {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-.modal__btn-close {
-  zoom: 2;
-  position: absolute;
-  top: 0;
-  right: 0;
-  align-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: transparent;
-  border: none;
-  padding: 0;
-  transform: fill var(--transition-dur-fun);
-}
-
-.modal__close-icon {
-  fill: var(--primery-text-color);
-  transition: fill var(--transition-dur-fun);
-}
-.modal__btn-close:hover .modal__close-icon, .modal__btn-close:focus .modal__close-icon {
-  fill: var(--primery-text-color);
-}
-
-.modal__cta-title {
-  text-transform: uppercase;
-}
-
-.modal__cta-title {
-  font-size: 30px;
-  font-weight: 300;
-  margin-bottom: 12px;
-  text-align: center;
-  line-height: 1.15;
-  color: var(--primery-text-color);
-  color: #00193e;
-  font-family: Montserrat Alternates;
-  font-style: normal;
-  line-height: 140%;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 768px) {
-  .modal__cta-title {
-    font-size: 37px;
-    font-weight: 300;
-  }
-}
-
-.modal__label-title {
-  text-align: center;
-  color: var(--primery-text-color);
-  font-style: normal;
-  line-height: normal;
-  padding-bottom: 10px;
-  font-size: 15px;
-  font-weight: 500;
-}
-@media screen and (min-width: 1200px) {
-  .modal__label-title {
-    text-align: left;
-    font-size: 15px;
-    font-weight: 500;
-  }
-}
-
-.modal__input-name,
-.modal__input-phone,
-.modal__input-mail {
-  display: block;
-  width: 100%;
-  height: 46px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  padding-left: 15px;
-  outline: none;
-  transition: border-color var(--transition-dur-fun);
-}
-.modal__input-name:focus-within,
-.modal__input-phone:focus-within,
-.modal__input-mail:focus-within {
-  border-color: var(--brend-color);
-}
-
-.modal__input-position {
-  margin-top: 5px;
-  display: block;
-  position: relative;
-  margin-bottom: 20px;
-}
-.modal__input-position:focus-within {
-  fill: var(--brend-color);
-}
-
-.modal__icon-input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 18px;
-  height: 18px;
-  margin: 11px;
-  transition: fill var(--transition-dur-fun);
-}
-
-.user-name {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.modal__input-coment {
-  width: 100%;
-  height: 50px;
-  padding: 16px;
-  outline: none;
-}
-.modal__input-coment:focus-within {
-  border-color: var(--brend-color);
-}
-.modal__input-coment::placeholder {
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
-}
-
-textarea {
-  display: block;
-  resize: none;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  margin-bottom: 20px;
-}
-
-.polity {
-  text-align: left;
-  align-items: center;
-  font-family: "Roboto";
-  font-style: normal;
-  margin-bottom: 30px;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--secondary-text-color);
-}
-@media screen and (min-width: 1200px) {
-  .polity {
-    font-size: 14px;
-  }
-}
-
-.checkbox-title {
-  font-family: "Roboto";
-  font-style: normal;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.71;
-  color: #757575;
-}
-
-.checkbox__link {
-  color: var(--brend-color);
-}
-
-.checkbox__icon {
-  display: inline-block;
-  width: 16px;
-  height: 15px;
-  margin-right: 7px;
-  border: 2px solid var(--primery-text-color);
-  border-radius: 2px;
-}
-.checkbox:checked + .checkbox__icon {
-  border-color: var(--brend-color);
-  background-color: var(--brend-color);
-  background-image: url(../images/icon-check.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-origin: border-box;
-}
-
-.centre {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.notification {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.9;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--brend-color);
-  color: var(--primery-text-color);
-  padding: 10px 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  z-index: 10000;
-  font-size: 26px;
-  text-transform: uppercase;
 }
 
 .mobile-menu {
@@ -804,7 +548,7 @@ textarea {
   position: relative;
   z-index: 999;
   width: 50px;
-  height: 45px;
+  height: 50px;
 }
 @media screen and (min-width: 768px) {
   .logo-up_icon {
@@ -812,7 +556,7 @@ textarea {
     margin-right: 20px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .logo-up_icon {
     margin-right: 100px;
   }
@@ -834,69 +578,6 @@ textarea {
   margin-bottom: 10px;
 }
 
-.heading {
-  text-align: center;
-  padding: 20px 0;
-  max-width: 750px;
-  margin: 0 auto;
-}
-.heading h2 {
-  position: relative;
-  font-weight: 600;
-  font-family: "Dosis", sans-serif;
-  text-transform: uppercase;
-  padding: 0 0 10px;
-  color: #231f20;
-}
-.heading h2:before {
-  position: absolute;
-  content: "";
-  height: 1px;
-  width: 150px;
-  background: #ffbe00;
-  left: 0;
-  right: 0;
-  bottom: 1px;
-  margin: auto;
-}
-.heading h2:after {
-  content: "";
-  height: 3px;
-  width: 50px;
-  background: #3c377b;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  bottom: 0;
-}
-
-.img-fluid {
-  width: 100%;
-}
-
-.slick-prev {
-  background-image: url(../images/svg/arrow_prew.svg);
-}
-.slick-prev:hover {
-  background-image: url(../images/arrow_prew_hover.svg);
-}
-
-.slick-next {
-  background-image: url(../images/arrow_next.svg);
-}
-.slick-next:hover {
-  background-image: url(../images/arrow_next_hover.svg);
-}
-
-@media (max-width: 1200px) {
-  .slider_container {
-    width: 100%;
-  }
-  .slick-arrow {
-    display: none;
-  }
-}
 .clothing-header {
   background: rgba(0, 25, 62, 0.5);
   backdrop-filter: blur(10px);
@@ -919,7 +600,7 @@ textarea {
   padding-left: 15px;
   padding-right: 15px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .clothing-header__conteiner {
     flex-direction: row;
   }
@@ -953,7 +634,7 @@ textarea {
     gap: 10px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .menu-nav-list {
     display: flex;
     gap: 30px;
@@ -975,7 +656,7 @@ textarea {
     position: relative;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .menu-nav__link {
     font-size: 12px;
     font-weight: 400;
@@ -999,7 +680,7 @@ textarea {
     display: block;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .list-contact {
     display: flex;
     flex-direction: column;
@@ -1023,7 +704,7 @@ textarea {
     font-size: 14px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .list-contact-link {
     font-size: 20px;
     font-weight: 400;
@@ -1064,7 +745,7 @@ textarea {
 .fld {
   flex-direction: column;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .fld {
     flex-direction: row;
   }
@@ -1086,7 +767,7 @@ textarea {
     padding-top: 250px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .hero {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/smokingman.jpg");
     padding: 100px 0;
@@ -1126,7 +807,7 @@ textarea {
     text-align: center;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .hero__title {
     font-size: 50px;
     font-weight: 900;
@@ -1139,7 +820,7 @@ textarea {
 .hero__title_sub {
   text-align: center;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .hero__title_sub {
     text-align: start;
     margin-bottom: 80px;
@@ -1154,7 +835,7 @@ textarea {
   flex-direction: column;
   margin-bottom: 10px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .hero__title_sub_wrapper {
     flex-direction: row;
     justify-content: flex-end;
@@ -1171,7 +852,7 @@ textarea {
   margin: 0 auto 20px;
   max-width: 400px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .hero_address_wrapper {
     margin: 20px 0;
     height: 120px;
@@ -1180,7 +861,7 @@ textarea {
 .hero_address_wrapper a {
   color: var(--primery-text-color);
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .hero_address_container {
     display: flex;
     flex-direction: row;
@@ -1195,7 +876,7 @@ textarea {
   right: -75%;
   margin-top: -50px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .hero_discount_img_mobile {
     display: none;
   }
@@ -1203,7 +884,7 @@ textarea {
 .hero_discount_img_desktop {
   display: none;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .hero_discount_img_desktop {
     display: block;
     margin-top: -275px;
@@ -1239,7 +920,7 @@ textarea {
   gap: 30px;
   flex-wrap: wrap;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .technology-list {
     flex-wrap: nowrap;
     flex-direction: row;
@@ -1295,7 +976,7 @@ textarea {
   background-position: center;
   background-repeat: no-repeat;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .service_section {
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/jacket-man.jpg");
     max-width: 1600px;
@@ -1341,7 +1022,7 @@ textarea {
     max-width: 354px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .service_section-list__img {
     max-width: 370px;
   }
@@ -1374,7 +1055,7 @@ textarea {
     height: 230px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .service_img_container {
     width: 270px;
   }
@@ -1391,7 +1072,7 @@ textarea {
   margin: 0 auto;
   scale: 1.5;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .engine_img {
     margin-top: 25px;
   }
@@ -1431,140 +1112,6 @@ textarea {
   z-index: 99;
 }
 
-.usa {
-  background: url(../images/bg/usa_bg_mobile.png);
-  background-size: auto;
-  background-repeat: unset;
-  background-position: bottom;
-  background-color: #efefef;
-  text-align: center;
-  color: #000;
-}
-.usa .container {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-@media screen and (min-width: 768px) {
-  .usa .container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .usa {
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../images/bg/usa_bg.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-  }
-}
-.usa_text_wrapper {
-  color: #878787;
-  text-align: start;
-  padding: 20px;
-}
-.usa_text_wrapper h3 {
-  font-size: 50px;
-  font-weight: 500;
-  text-shadow: 0px 0px 1px var(--primery-text-color);
-  margin-bottom: 20px;
-}
-.usa_plan_wrapper {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
-  padding-top: 20px;
-}
-@media screen and (min-width: 768px) {
-  .usa_plan_wrapper {
-    width: 270px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .usa_plan_wrapper {
-    width: 270px;
-    height: 460px;
-  }
-}
-.usa_plan_wrapper img {
-  width: 100px;
-  min-height: auto;
-  margin-bottom: 20px;
-}
-@media screen and (min-width: 768px) {
-  .usa_plan_wrapper img {
-    width: auto;
-  }
-}
-.usa_plan_wrapper h4 {
-  margin-bottom: 20px;
-  color: var(--brend-color);
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 500;
-}
-@media screen and (min-width: 1200px) {
-  .usa_plan_wrapper h4 {
-    font-size: 26px;
-    font-weight: 400;
-  }
-}
-.usa_plan_wrapper ul {
-  margin-bottom: 50px;
-}
-.usa_plan_paragraph {
-  display: none;
-}
-@media screen and (min-width: 1200px) {
-  .usa_plan_paragraph {
-    display: block;
-  }
-}
-.usa_btn_read_more {
-  margin-top: 50px;
-  border-radius: 4px;
-  padding: 10px 20px;
-  color: #000;
-  font-size: 14px;
-  font-weight: 600;
-  opacity: 0.9;
-  background-color: var(--brend-color);
-}
-.usa_btn_read_more:hover {
-  opacity: 1;
-  color: var(--primery-text-color);
-}
-
-.gallery {
-  border-bottom: 10px solid #6c7073;
-  padding-bottom: 200px;
-  background-image: url(../images/bg/gallery_bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #2f303a;
-  text-align: center;
-}
-.gallery_title {
-  font-family: "Montserrat";
-  font-size: 26px;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 140%;
-  text-transform: uppercase;
-  text-align: center;
-}
-.gallery_text {
-  font-family: "Montserrat";
-  max-width: 450px;
-  margin: 20px auto;
-  margin-bottom: 50px;
-}
-
 .about {
   padding-bottom: 60px;
   background-image: url("../images/about-bg.jpg");
@@ -1584,7 +1131,7 @@ textarea {
   line-height: 140%;
   text-transform: uppercase;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .about h1 {
     text-align: start;
     font-size: 50px;
@@ -1595,25 +1142,25 @@ textarea {
   font-style: normal;
   line-height: normal;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .about p {
     max-width: 500px;
     text-align: start;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .about .container {
     display: flex;
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .about_title_wrapper {
     width: 50%;
     margin-bottom: 50px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .about_title_wrapper_text {
     display: flex;
     align-items: flex-end;
@@ -1638,7 +1185,7 @@ textarea {
   font-size: 20px;
   margin-bottom: 20px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .about_description .container {
     display: flex;
     justify-content: space-between;
@@ -1648,7 +1195,7 @@ textarea {
   width: 100%;
   margin-bottom: 30px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .about_description_img {
     max-width: 600px;
     max-height: 320px;
@@ -1666,7 +1213,7 @@ textarea {
   line-height: 140%;
   margin-bottom: 20px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .about_description p {
     text-align: justify;
     font-size: 20px;
@@ -1692,7 +1239,7 @@ textarea {
   padding: 30px 20px;
   flex-wrap: wrap;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .about_difference_wrapper {
     flex-direction: row;
     flex-wrap: nowrap;
@@ -1711,7 +1258,7 @@ textarea {
   display: inline-block;
   border-bottom: 1px solid var(--brend-color);
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .about_difference h2 {
     font-size: 50px;
     font-weight: 600;
@@ -1739,7 +1286,7 @@ textarea {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .about_difference_list h3 {
     text-align: start;
   }
@@ -1770,7 +1317,7 @@ textarea {
   display: block;
   margin: 0 auto;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .about_partners ul {
     display: flex;
     gap: 30px;
@@ -1819,7 +1366,7 @@ textarea {
   color: var(--primery-text-color);
 }
 
-.vivat-footer {
+.clothing-footer {
   background-image: url("../images/footer.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -1831,7 +1378,7 @@ textarea {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  .vivat-footer .container {
+  .clothing-footer .container {
     text-align: center;
     flex-wrap: wrap;
     gap: 60px;
@@ -1839,36 +1386,36 @@ textarea {
     justify-content: center;
   }
 }
-@media screen and (min-width: 1200px) {
-  .vivat-footer .container {
+@media screen and (min-width: 1230px) {
+  .clothing-footer .container {
     align-items: flex-start;
     column-gap: normal;
   }
-  .vivat-footer .button_container {
+  .clothing-footer .button_container {
     justify-content: center;
   }
 }
-.vivat-footer p {
+.clothing-footer p {
   margin: 0 auto;
   max-width: 500px;
 }
-.vivat-footer h2,
-.vivat-footer h3,
-.vivat-footer p {
+.clothing-footer h2,
+.clothing-footer h3,
+.clothing-footer p {
   margin-bottom: 30px;
   font-weight: 500;
 }
-.vivat-footer .menu-nav {
+.clothing-footer .menu-nav {
   justify-content: center;
 }
-.vivat-footer h2 {
+.clothing-footer h2 {
   margin-bottom: 60px;
 }
 
 .footer-address {
   text-align: center;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .footer-address {
     display: flex;
     justify-content: space-between;
@@ -1900,7 +1447,7 @@ textarea {
   color: var(--brend-color);
 }
 
-.vivat-footer .menu-nav-list {
+.clothing-footer .menu-nav-list {
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 500px;
@@ -1911,7 +1458,7 @@ textarea {
   margin-bottom: 9px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .mobile_footer_menu {
     display: none;
   }
@@ -1943,7 +1490,7 @@ textarea {
 .desktop_footer_menu {
   display: none;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .desktop_footer_menu {
     display: block;
   }
@@ -1976,514 +1523,6 @@ textarea {
   flex-direction: column;
   align-items: center;
   margin: 60px 0;
-}
-
-.usa_cars {
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/usa_hero_bg_mobile.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #2f303a;
-  text-align: center;
-}
-.usa_cars p {
-  margin-top: 10px;
-  margin-bottom: 40px;
-}
-@media screen and (min-width: 768px) {
-  .usa_cars p {
-    width: 90%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .usa_cars p {
-    width: 100%;
-    max-width: 450px;
-    text-align: start;
-    font-style: normal;
-    line-height: normal;
-  }
-}
-@media screen and (min-width: 768px) {
-  .usa_cars .container {
-    display: flex;
-    justify-content: space-around;
-  }
-}
-.usa_cars__title {
-  width: 240px;
-  box-sizing: border-box;
-  text-align: start;
-  margin-top: 15px;
-  font-size: 30px;
-  font-weight: 600;
-  margin: 0 auto;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-style: normal;
-  line-height: 140%;
-}
-@media screen and (min-width: 768px) {
-  .usa_cars__title {
-    text-align: center;
-    width: 360px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .usa_cars__title {
-    font-size: 50px;
-    font-weight: 900;
-    line-height: 1.36;
-    margin: 0;
-    text-align: start;
-  }
-}
-.usa_cars__title_wrapper {
-  display: flex;
-  align-items: flex-end;
-}
-.usa_cars_offer_mobile {
-  position: relative;
-  top: -5px;
-  font-size: 14px;
-  font-weight: 400;
-  color: var(--primery-text-color);
-  border: 1px solid var(--brend-color);
-  border-radius: 50px;
-  padding: 10px;
-  text-transform: none;
-}
-@media screen and (min-width: 1200px) {
-  .usa_cars_offer_mobile {
-    display: none;
-  }
-}
-.usa_cars_offer_mobile_desktop {
-  display: none;
-}
-@media screen and (min-width: 1200px) {
-  .usa_cars_offer_mobile_desktop {
-    text-transform: uppercase;
-    position: relative;
-    top: -15px;
-    font-size: 14px;
-    font-weight: 400;
-    color: var(--primery-text-color);
-    border: 1px solid var(--brend-color);
-    border-radius: 50px;
-    padding: 10px;
-    display: block;
-  }
-}
-.usa_cars_form {
-  box-sizing: border-box;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(2px);
-  padding: 20px;
-  width: 100%;
-  margin: 0 auto;
-}
-@media screen and (min-width: 768px) {
-  .usa_cars_form {
-    width: 340px;
-    padding: 30px;
-  }
-}
-.usa_cars_form_wrapper {
-  padding: 20px;
-  text-align: center;
-}
-.usa_cars_form_text {
-  font-size: 16px;
-  margin-bottom: 10px !important;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 768px) {
-  .usa_cars_form_text {
-    font-size: 26px;
-    margin-bottom: 30px !important;
-  }
-}
-.usa_cars_discount_mobile {
-  font-size: 30px;
-  font-weight: 900;
-  font-family: Montserrat;
-}
-.usa_cars_discount_mobile_text {
-  font-weight: 400;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 768px) {
-  .usa_cars_discount_mobile_text {
-    display: none;
-  }
-}
-.usa_cars_discount_mobile_text_desktop {
-  display: none;
-  font-size: 26px;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 140%;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 1200px) {
-  .usa_cars_discount_mobile_text_desktop {
-    display: block;
-  }
-}
-.usa_cars_discount_mobile_text_desktop span {
-  font-size: 50px;
-  font-weight: 600;
-}
-.usa_cars_delivery {
-  text-align: center;
-  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url(../images/bg/usa_bg.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #000;
-}
-@media screen and (min-width: 1200px) {
-  .usa_cars_delivery {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-}
-.usa_cars_delivery .container {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-@media screen and (min-width: 768px) {
-  .usa_cars_delivery .container {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-.usa_cars_delivery_title {
-  margin-bottom: 50px;
-  font-size: 18px;
-  font-weight: 600;
-  color: black;
-  text-transform: uppercase;
-}
-.usa_cars_delivery-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  align-items: center;
-  justify-content: center;
-}
-@media screen and (min-width: 1200px) {
-  .usa_cars_delivery-list {
-    gap: 50px;
-  }
-}
-.usa_cars_delivery-list__item {
-  box-sizing: content-box;
-  margin-bottom: 30px;
-  background-color: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-}
-@media screen and (min-width: 768px) {
-  .usa_cars_delivery-list__item {
-    width: calc(100% - 30px)/2;
-    margin-bottom: 0;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .usa_cars_delivery-list__item {
-    width: calc(100% - 10px)/3;
-  }
-}
-.usa_cars_delivery-list__item p {
-  display: none;
-}
-@media screen and (min-width: 1200px) {
-  .usa_cars_delivery-list__item p {
-    display: block;
-  }
-}
-.usa_cars_delivery-list__img {
-  max-width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .usa_cars_delivery-list__img {
-    max-width: 354px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .usa_cars_delivery-list__img {
-    max-width: 370px;
-  }
-}
-.usa_cars_delivery_wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-}
-@media screen and (min-width: 768px) {
-  .usa_cars_delivery_wrapper {
-    padding: 20px;
-    width: 270px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .usa_cars_delivery_wrapper {
-    width: 260px;
-    height: 400px;
-  }
-}
-.usa_cars_delivery_wrapper img {
-  width: 100px;
-  min-height: auto;
-  margin-bottom: 20px;
-}
-@media screen and (min-width: 768px) {
-  .usa_cars_delivery_wrapper img {
-    width: 140px;
-  }
-}
-.usa_cars_delivery_wrapper h4 {
-  margin-bottom: 20px;
-  color: var(--brend-color);
-  text-transform: uppercase;
-  font-size: 26px;
-  font-weight: 400;
-}
-.usa_cars_pay {
-  text-align: center;
-  color: #000;
-}
-.usa_cars_pay h3 {
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-.usa_cars_pay_list {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-bottom: 50px;
-}
-@media screen and (min-width: 768px) {
-  .usa_cars_pay_list {
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-}
-.usa_cars_pay_wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 4px;
-  border: 1px solid var(--brend-color);
-  box-sizing: border-box;
-  gap: 20px;
-  width: 100%;
-  padding: 20px;
-  margin-bottom: 20px;
-}
-@media screen and (min-width: 1200px) {
-  .usa_cars_pay_wrapper {
-    flex-direction: row;
-    width: 540px;
-  }
-}
-.usa_cars_pay_wrapper img {
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-.usa_cars_pay h4 {
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 1200px) {
-  .usa_cars_pay h4 {
-    width: 340px;
-  }
-}
-.usa_cars_pay p {
-  font-size: 16px;
-  font-weight: 400;
-  margin: 20px 0 50px 0;
-}
-.usa_cars_pay_alert {
-  padding: 10px;
-  background-color: #00193e;
-}
-.usa_cars_pay_alert p {
-  color: var(--primery-text-color);
-  text-transform: uppercase;
-  font-style: normal;
-  line-height: normal;
-  margin: 20px 0;
-}
-@media screen and (min-width: 768px) {
-  .usa_cars {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/usa_hero_bg_mobile@2x.jpg);
-    padding: 118px 0;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .usa_cars {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/usa_hero_bg_desktop.jpg);
-    padding-bottom: 150px;
-    max-width: 1600px;
-    margin: 0 auto;
-  }
-}
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
-  .usa_cars {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/usa_hero_bg_desktop@2x.jpg);
-  }
-}
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
-  .usa_cars {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bg/usa_hero_bg_desktop@2x.jpg);
-  }
-}
-
-.usa_send {
-  background-color: var(--brend-color);
-  color: var(--primery-text-color);
-  width: 100%;
-}
-.usa_send:hover {
-  scale: 1.1;
-}
-
-.case {
-  background-color: #efefef;
-}
-.case p {
-  text-align: center;
-}
-.case_list {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-  box-sizing: border-box;
-}
-@media screen and (min-width: 768px) {
-  .case_list {
-    justify-content: space-between;
-  }
-}
-.case_wrapper {
-  box-sizing: border-box;
-  max-width: 300px;
-  color: #000;
-  text-align: center;
-  background-color: #fff;
-  margin-bottom: 30px;
-}
-.case_wrapper_sub_title,
-.case_wrapper h4 {
-  font-size: 16px;
-  font-weight: 500;
-  font-style: normal;
-  line-height: 140%; /* 36.4px */
-  text-transform: uppercase;
-}
-@media screen and (min-width: 1200px) {
-  .case_wrapper_sub_title,
-  .case_wrapper h4 {
-    font-size: 26px;
-    font-weight: 500;
-    font-style: normal;
-    line-height: 140%; /* 36.4px */
-    text-transform: uppercase;
-  }
-}
-@media screen and (min-width: 350px) {
-  .case_wrapper {
-    max-width: 330px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .case_wrapper {
-    max-width: 360px;
-  }
-}
-.case_wrapper_total {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 10px;
-  border-top: 1px solid var(--brend-color);
-  color: #00193e;
-}
-.case_wrapper_total_hidden {
-  text-align: start !important;
-  padding: 10px;
-  visibility: hidden;
-  color: #878787;
-}
-.case_wrapper_table {
-  width: 100%;
-  padding: 5px 10px;
-  text-transform: uppercase;
-  font-size: 16px;
-  font-weight: 400;
-}
-@media screen and (min-width: 1200px) {
-  .case_wrapper_table {
-    font-size: 18px;
-    font-weight: 400;
-  }
-}
-.case_wrapper_table_td1 {
-  color: #878787;
-  padding: 5px 10px;
-  padding-left: 0;
-  padding-right: 40px;
-}
-.case_wrapper_table_td2 {
-  color: #00193e;
-  padding: 5px 10px;
-  text-align: start;
-}
-.case ul.slick-dots {
-  position: relative;
-  top: -40px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-}
-.case ul.slick-dots li button {
-  border: none;
-  background-color: #fff;
-  height: 20px;
-  width: 20px;
-  margin: 5px;
-}
-.case ul.slick-dots li.slick-active button {
-  background: var(--brend-color);
-  scale: 1.1;
-}
-.case .slick-slide img {
-  width: 100%;
-  min-height: 285px;
-  margin: 0 auto;
-}
-.case a {
-  font-size: 24px;
-  font-weight: 600;
-  background-color: var(--brend-color);
-  padding: 10px 20px;
-  margin: 0 auto;
-  color: var(--primery-text-color);
-  border-radius: 4px;
 }
 
 .price {
@@ -2523,7 +1562,7 @@ textarea {
   align-items: center;
   text-align: start;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .price_list_content_wrapper {
     text-transform: uppercase;
   }
@@ -2608,7 +1647,7 @@ textarea {
 .price_desktop_section {
   display: none;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .price_desktop_section {
     display: block;
   }
@@ -2650,7 +1689,7 @@ textarea {
 .service_page_list_item {
   padding-top: 100px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .service_page_list_item {
     display: flex;
   }
@@ -2662,7 +1701,7 @@ textarea {
   justify-content: space-evenly;
   text-align: center;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .service_page_list_text_wrapper {
     align-items: flex-start;
     padding: 0 30px;
@@ -2677,7 +1716,7 @@ textarea {
 .service_page_list_text_wrapper p {
   margin-bottom: 20px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .service_page_list_text_wrapper p {
     text-align: start;
   }
@@ -2703,7 +1742,7 @@ textarea {
     width: 70%;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .service_page_list img {
     margin: 0;
   }
@@ -2830,11 +1869,14 @@ textarea {
     animation: tabletModalAnimation 1.5s forwards;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1230px) {
   .modal {
     opacity: 0;
     width: 0%;
     height: 0%;
     animation: desktopModalAnimation 1.5s forwards;
   }
+}
+nav a:hover {
+  padding-top: 28px;
 }/*# sourceMappingURL=main.css.map */

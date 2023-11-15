@@ -1,8 +1,4 @@
 @media screen and (min-width: 1200px) {
-  .contact_wrraper {
-    // max-width: 600px;
-  }
-
   .cont_link:hover {
     scale: 1.1;
   }
@@ -12,4 +8,19 @@
 }
 .btn_link {
   color: #000;
+}
+.link_contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.look_title {
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.look_p {
+  font-size: 14px !important;
+  text-align: center !important;
 }
