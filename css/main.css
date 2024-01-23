@@ -3,7 +3,7 @@
   --primery-text-color: #fff;
   --secondary-text-color: #757575;
   --color-text-dark-theme: #565c5f;
-  --text-paragraph: "Roboto", sans-serif;
+  --text-paragraph: 'Roboto', sans-serif;
   --color-icon: #afb1b8;
   --transition-dur-fun: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -21,7 +21,8 @@
   overflow: hidden;
 }
 
-.technology__icon, .button-nav {
+.technology__icon,
+.button-nav {
   display: flex;
   justify-content: center;
 }
@@ -127,7 +128,7 @@ button {
   color: var(--brend-color);
 }
 .link-active::after {
-  content: "";
+  content: '';
   position: absolute;
   display: block;
   width: 100%;
@@ -144,7 +145,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Montserrat", Alternates;
+  font-family: 'Montserrat', Alternates;
   font-size: 18px;
   font-weight: 400;
   letter-spacing: 0.03em;
@@ -196,7 +197,7 @@ body {
 }
 
 .logo-up {
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-size: 24px;
   font-weight: 700;
   line-height: 1.16;
@@ -226,7 +227,7 @@ body {
 .logo-down-link {
   display: inline-block;
   font-style: normal;
-  font-family: "Raleway";
+  font-family: 'Raleway';
   font-size: 26px;
   font-weight: 700;
   line-height: 1.14;
@@ -234,12 +235,13 @@ body {
   margin-bottom: 20px;
   transition: color var(--transition-dur-fun);
 }
-.logo-down-link:hover, .logo-down-link:focus {
+.logo-down-link:hover,
+.logo-down-link:focus {
   color: var(--brend-color);
 }
 
 .hero-btn {
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-size: 14px;
   font-weight: 600;
@@ -281,12 +283,15 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
-  transition: background-color var(--transition-dur-fun), color var(--transition-dur-fun), box-shadow var(--transition-dur-fun);
+  transition: background-color var(--transition-dur-fun),
+    color var(--transition-dur-fun), box-shadow var(--transition-dur-fun);
 }
-.button-nav__link:hover, .button-nav__link:focus {
+.button-nav__link:hover,
+.button-nav__link:focus {
   background-color: var(--brend-color);
   color: var(--color-text-dark-theme);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
 
@@ -354,7 +359,8 @@ body {
   background-color: #fff;
   transition: background-color var(--transition-dur-fun);
 }
-.button-active:hover, .button-active:focus {
+.button-active:hover,
+.button-active:focus {
   scale: 1.1;
   background: var(--brend-color);
   color: var(--text-paragraph);
@@ -504,7 +510,8 @@ body {
   fill: var(--brend-color);
   transition: fill var(--transition-dur-fun);
 }
-.mobile-menu__close-btn:hover .mobile-menu__close-icon, .mobile-menu__close-btn:focus .mobile-menu__close-icon {
+.mobile-menu__close-btn:hover .mobile-menu__close-icon,
+.mobile-menu__close-btn:focus .mobile-menu__close-icon {
   fill: var(--brend-color);
 }
 
@@ -610,7 +617,8 @@ body {
     display: flex;
     align-items: center;
   }
-  .clothing-header a:hover, .clothing-header a:focus {
+  .clothing-header a:hover,
+  .clothing-header a:focus {
     color: var(--brend-color);
   }
 }
@@ -753,7 +761,11 @@ body {
 
 .hero {
   padding-top: 100px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/bg.jpg");
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -762,33 +774,59 @@ body {
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/smokingman.jpg");
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/smokingman.jpg');
     padding: 118px 0;
     padding-top: 250px;
   }
 }
 @media screen and (min-width: 1230px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/smokingman.jpg");
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/smokingman.jpg');
     padding: 100px 0;
     padding-top: 250px;
     max-width: 1600px;
     margin: 0 auto;
   }
 }
-@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px),
+  screen and (min-resolution: 192dpi) and (max-width: 767px),
+  screen and (min-resolution: 2dppx) and (max-width: 767px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/smokingman.jpg");
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/smokingman.jpg');
   }
 }
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+  screen and (min-resolution: 192dpi) and (min-width: 768px),
+  screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/smokingman.jpg");
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/smokingman.jpg');
   }
 }
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+  screen and (min-resolution: 192dpi) and (min-width: 1200px),
+  screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .hero {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/smokingman.jpg");
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/smokingman.jpg');
   }
 }
 .hero__title {
@@ -971,14 +1009,22 @@ body {
 
 .service_section {
   text-align: center;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.7)), url("../images/jacket-man.jpg");
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.7),
+      rgba(47, 48, 58, 0.7)
+    ),
+    url('../images/jacket-man.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 @media screen and (min-width: 1230px) {
   .service_section {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/jacket-man.jpg");
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/jacket-man.jpg');
     max-width: 1600px;
     margin: 0 auto;
   }
@@ -1005,12 +1051,13 @@ body {
   box-sizing: content-box;
   margin-bottom: 30px;
   background: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 @media screen and (min-width: 768px) {
   .service_section-list__item {
-    width: calc(100% - 30px)/2;
+    width: calc(100% - 30px) / 2;
     margin-bottom: 0;
   }
 }
@@ -1114,12 +1161,11 @@ body {
 
 .about {
   padding-bottom: 60px;
-  background-image: url("../images/about-bg.jpg");
+  background-image: url('../images/about-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #2f303a;
-  background-padding-top: 200px;
   max-width: 1600px;
   margin: 0 auto;
   text-align: center;
@@ -1223,7 +1269,7 @@ body {
 .about_difference {
   padding-bottom: 60px;
   text-align: center;
-  background-image: url("../images/about_difference.jpg");
+  background-image: url('../images/about_difference.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1354,7 +1400,11 @@ body {
 }
 .ten {
   color: var(--primery-text-color) !important;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/alteration_bg.jpg");
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('../images/alteration_bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1367,7 +1417,7 @@ body {
 }
 
 .clothing-footer {
-  background-image: url("../images/footer.jpg");
+  background-image: url('../images/footer.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1443,7 +1493,8 @@ body {
   color: rgba(255, 255, 255, 0.9);
   transition: color var(--transition-dur-fun);
 }
-.address-link:hover, .address-link:focus {
+.address-link:hover,
+.address-link:focus {
   color: var(--brend-color);
 }
 
@@ -1774,7 +1825,8 @@ body {
   }
 }
 @keyframes softPulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -1786,7 +1838,8 @@ body {
 }
 
 @keyframes softPulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
   }
   50% {
@@ -1879,4 +1932,4 @@ body {
 }
 nav a:hover {
   padding-top: 28px;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
