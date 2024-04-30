@@ -872,7 +872,7 @@ body {
     font-weight: 900;
     line-height: 1.36;
     margin-right: 0;
-    text-align: end;
+    text-align: start;
     width: 650px;
   }
 }

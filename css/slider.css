@@ -8,9 +8,9 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: #333;
-  color: #fff;
-  line-height: 1.6;
+  /* background: #333; */
+  /* color: #fff; */
+  /* line-height: 1.6; */
 }
 
 .slider {
@@ -30,6 +30,7 @@ body {
   opacity: 0;
   /* We used transition to make it fade */
   transition: opacity 0.4s ease-in;
+  background: #333;
 }
 
 .slide.current {
@@ -41,6 +42,7 @@ body {
   bottom: 170px;
   right: -600px;
   opacity: 0;
+  z-index: 99;
   width: 600px;
   /* background-color: rgba(255, 255, 255, 0.8); */
   color: #ffffff;
@@ -60,14 +62,17 @@ body {
 
 .buttons button#next {
   position: absolute;
-  top: 50%;
-  right: 15px;
+  bottom: 0;
+  left: 51%;
+  z-index: 100;
 }
 
 .buttons button#prev {
   position: absolute;
-  top: 50%;
-  left: 15px;
+  bottom: 0;
+  right: 51%;
+  z-index: 100;
+  background: url(../images/svg/btn_up.svg);
 }
 
 .buttons button {
