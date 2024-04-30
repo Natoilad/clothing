@@ -462,7 +462,7 @@ body {
   pointer-events: none;
   overflow-y: hidden;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1230px) {
   .mobile-menu {
     display: none;
   }
@@ -538,6 +538,12 @@ body {
   margin-top: auto;
 }
 
+/* NEW */
+.mobile-list-contact.list .mobile-list-contact__item:nth-child(1) {
+  display: flex;
+  gap: 10px;
+}
+
 .mobile-list-contact__link-phone {
   font-weight: 500;
   font-size: 20px;
@@ -565,7 +571,7 @@ body {
 }
 @media screen and (min-width: 1230px) {
   .logo-up_icon {
-    margin-right: 100px;
+    margin-right: 30px;
   }
 }
 
@@ -584,6 +590,10 @@ body {
 .mobile-list-contact__item {
   margin-bottom: 10px;
 }
+.list-contact.list li:nth-of-type(3),
+.list-contact.list-contact.list li:nth-of-type(2) {
+  display: none;
+}
 
 .clothing-header {
   background: rgba(0, 25, 62, 0.5);
@@ -596,8 +606,8 @@ body {
 }
 @media screen and (min-width: 768px) {
   .clothing-header {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 .clothing-header__conteiner {
@@ -615,7 +625,7 @@ body {
 @media screen and (min-width: 768px) {
   .clothing-header .container {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
   }
   .clothing-header a:hover,
   .clothing-header a:focus {
@@ -627,12 +637,12 @@ body {
   display: none;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .menu-nav {
     display: flex;
     align-items: center;
   }
-}
+} */
 .menu-nav-list {
   display: none;
 }
@@ -650,6 +660,9 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .list-contact.list li {
+    margin-bottom: 0;
+  }
   .menu-nav__link {
     font-size: 10px;
     font-weight: 400;
@@ -665,6 +678,10 @@ body {
   }
 }
 @media screen and (min-width: 1230px) {
+  .list-contact.list li:nth-of-type(3),
+  .list-contact.list-contact.list li:nth-of-type(2) {
+    display: block;
+  }
   .menu-nav__link {
     font-size: 12px;
     font-weight: 400;
@@ -678,7 +695,7 @@ body {
 }
 .list-contact {
   display: flex;
-  gap: 5px;
+  gap: 20px;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) {
@@ -691,10 +708,14 @@ body {
 @media screen and (min-width: 1230px) {
   .list-contact {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-left: auto;
+  }
+  .menu-nav {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -745,7 +766,7 @@ body {
   height: 40px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1230px) {
   .open-mobile-menu-btn {
     display: none;
   }

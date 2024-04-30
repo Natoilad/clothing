@@ -41,7 +41,7 @@
     <meta name="theme-color" content="#ffffff" />
     <!-- font -->
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap");
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap');
     </style>
     <!-- font end -->
     <!-- styles css -->
@@ -50,19 +50,20 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./css/slider.css" />
     <link rel="preload" href="./images/bg.jpg" as="image" />
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
+          dl = l != 'dataLayer' ? '&l=' + l : '';
         j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-58TX5PTN");
+      })(window, document, 'script', 'dataLayer', 'GTM-58TX5PTN');
     </script>
     <!-- End Google Tag Manager -->
   </head>
@@ -124,6 +125,24 @@
             <a class="list-contact-link link" href="tel:+610434512759">
               0434 512 759</a
             >
+          </li>
+          <li class="mobile-list-contact__item">
+            <a
+              target="_blank"
+              class="mobile-list-contact__link-phone link"
+              href="https://www.instagram.com/kotov_english?igsh=cGJkam5rdGxrN3h2 "
+            >
+              <img src="./images/svg/instagram-svgrepo-com.svg" alt="instagram"
+            /></a>
+          </li>
+          <li class="mobile-list-contact__item">
+            <a
+              target="_blank"
+              class="mobile-list-contact__link-phone link"
+              href="https://www.facebook.com/profile.php?id=61558093754096"
+            >
+              <img src="./images/svg/facebook-svgrepo-com.svg" alt="facebook"
+            /></a>
           </li>
         </ul>
         <button
@@ -189,6 +208,24 @@
           <ul class="mobile-list-contact list">
             <li class="mobile-list-contact__item">
               <a
+                target="_blank"
+                class="mobile-list-contact__link-phone link"
+                href="https://www.instagram.com/kotov_english?igsh=cGJkam5rdGxrN3h2 "
+              >
+                <img
+                  src="./images/svg/instagram-svgrepo-com.svg"
+                  alt="instagram"
+              /></a>
+              <a
+                target="_blank"
+                class="mobile-list-contact__link-phone link"
+                href="https://www.facebook.com/profile.php?id=61558093754096"
+              >
+                <img src="./images/svg/facebook-svgrepo-com.svg" alt="facebook"
+              /></a>
+            </li>
+            <li class="mobile-list-contact__item">
+              <a
                 class="mobile-list-contact__link-phone link"
                 href="tel:+610434512759"
               >
@@ -200,6 +237,75 @@
       </div>
     </header>
     <main>
+      <!-- slider -->
+      <section>
+        <div class="slider">
+          <div class="slide current">
+            <div class="content">
+              <h1>Awesome Clothing Alterations</h1>
+              <ul class="hero__title_sub list">
+                <li>
+                  <p>✓ Afordable prices</p>
+                </li>
+                <li>
+                  <p>✓ Hundreds of happy customers</p>
+                </li>
+                <li>
+                  <p>✓ Premium quality of our services</p>
+                </li>
+                <li>
+                  <p>✓ A Standout Customer experience</p>
+                </li>
+              </ul>
+              <div style="justify-content: start" class="button_container">
+                <a
+                  class="button-active hero-btn button link btn_link link_contact"
+                  href="#contact"
+                >
+                  CONTACT US</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="content">
+              <h1>Slide Two</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+                veniam rerum animi eligendi. Doloribus, totam.
+              </p>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="content">
+              <h1>Slide Three</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+                veniam rerum animi eligendi. Doloribus, totam.
+              </p>
+              <ul class="hero__title_sub list">
+                <li>
+                  <p>✓ Afordable prices</p>
+                </li>
+                <li>
+                  <p>✓ Hundreds of happy customers</p>
+                </li>
+                <li>
+                  <p>✓ Premium quality of our services</p>
+                </li>
+                <li>
+                  <p>✓ A Standout Customer experience</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="buttons">
+          <button id="prev"><i class="fas fa-arrow-left"></i></button>
+          <button id="next"><i class="fas fa-arrow-right"></i></button>
+        </div>
+      </section>
+
       <!-- hero -->
       <section class="hero section">
         <div class="container">
@@ -923,6 +1029,7 @@
     <script src="./js/accordion.js"></script>
     <script src="./js/totop.js"></script>
     <script src="./js/menu.js"></script>
+    <script src="./js/slider.js"></script>
     <!-- ANIMATE -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
