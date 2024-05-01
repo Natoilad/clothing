@@ -50,8 +50,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
-    <link rel="stylesheet" href="./css/slider.css" />
-    <link rel="preload" href="./images/bg.jpg" as="image" />
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
@@ -66,6 +64,44 @@
       })(window, document, 'script', 'dataLayer', 'GTM-58TX5PTN');
     </script>
     <!-- End Google Tag Manager -->
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        'script',
+        'https://connect.facebook.net/en_US/fbevents.js'
+      );
+      fbq('init', '3794373250805751');
+      fbq('track', 'PageView');
+      fbq('track', 'Lead');
+      fbq('track', 'ViewContent');
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=3794373250805751&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
   </head>
 
   <body>
@@ -257,7 +293,7 @@
                   <p>✓ A Standout Customer experience</p>
                 </li>
               </ul>
-              <div style="justify-content: start" class="button_container">
+              <div style="justify-content: end" class="button_container">
                 <a
                   class="button-active hero-btn button link btn_link link_contact"
                   href="#contact"
@@ -269,20 +305,34 @@
           </div>
           <div class="slide">
             <div class="content">
-              <h1>Slide Two</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-                veniam rerum animi eligendi. Doloribus, totam.
-              </p>
+              <h1 class="hero__title">Awesome Clothing Alterations</h1>
+              <ul class="hero__title_sub list">
+                <li>
+                  <p>✓ Unbeatable Prices</p>
+                </li>
+                <li>
+                  <p>✓ Countless Satisfied Customers</p>
+                </li>
+                <li>
+                  <p>✓ Top-notch Service Quality</p>
+                </li>
+                <li>
+                  <p>✓ An Exceptional Customer Experience</p>
+                </li>
+              </ul>
+              <div style="justify-content: end" class="button_container">
+                <a
+                  class="button-active hero-btn button link btn_link link_contact"
+                  href="#contact"
+                >
+                  CONTACT US</a
+                >
+              </div>
             </div>
           </div>
           <div class="slide">
             <div class="content">
-              <h1>Slide Three</h1>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-                veniam rerum animi eligendi. Doloribus, totam.
-              </p>
+              <h1 class="hero__title">Awesome Clothing Alterations</h1>
               <ul class="hero__title_sub list">
                 <li>
                   <p>✓ Afordable prices</p>
@@ -297,17 +347,31 @@
                   <p>✓ A Standout Customer experience</p>
                 </li>
               </ul>
+              <div style="justify-content: end" class="button_container">
+                <a
+                  class="button-active hero-btn button link btn_link link_contact"
+                  href="#contact"
+                >
+                  CONTACT US</a
+                >
+              </div>
             </div>
           </div>
         </div>
         <div class="buttons">
-          <button id="prev"><i class="fas fa-arrow-left"></i></button>
-          <button id="next"><i class="fas fa-arrow-right"></i></button>
+          <button id="prev">
+            <i class="fas fa-arrow-left"></i>
+            <img src="./images/svg/arrow-sm-left.svg" alt="" />
+          </button>
+          <button id="next">
+            <i class="fas fa-arrow-right"></i
+            ><img src="./images/svg/arrow-sm-right.svg" alt="" />
+          </button>
         </div>
       </section>
 
       <!-- hero -->
-      <section class="hero section">
+      <!-- <section class="hero section">
         <div class="container">
           <h1 class="hero__title">Awesome Clothing Alterations</h1>
           <div class="hero__title_sub_wrapper">
@@ -335,7 +399,7 @@
             >
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- techniligy -->
       <section data-aos="fade-up" class="technology section">
         <div class="container">
@@ -753,7 +817,11 @@
         <!-- item end -->
         <div data-aos="fade-up" class="price_button_wrapper">
           <a
-            style="background-color: var(--brend-color); margin: 0 auto"
+            style="
+              background-color: var(--brend-color);
+              margin: 0 auto;
+              color: #fff;
+            "
             class="button-active hero-btn button link btn_link link_contact"
             href="#contact"
           >
@@ -849,10 +917,76 @@
       >
         <h2
           data-aos="fade-up"
-          style="color: #000; margin-bottom: 20px; text-align: center"
+          style="
+            color: #000;
+            margin-bottom: 20px;
+            text-align: center;
+            visibility: hidden;
+          "
         >
           CONTACTS US
         </h2>
+        <form
+          action="./forms/thank-you.php"
+          method="post"
+          role="form"
+          class="php-email-form"
+        >
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input
+                type="text"
+                name="user-name"
+                class="form-control"
+                id="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="col-md-6 form-group mt-md-0">
+              <input
+                type="tel"
+                class="form-control"
+                name="user-phone"
+                id="phone"
+                placeholder="Your phone"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group mt-3">
+            <textarea
+              style="resize: none"
+              class="form-control"
+              name="user-comment"
+              rows="5"
+              placeholder="Message"
+            ></textarea>
+          </div>
+          <div class="text-center">
+            <button
+              id="Lead"
+              class="button-active hero-btn button link btn_link link_contact"
+              style="
+                padding: 5px 10px;
+                margin-bottom: 20px;
+                text-align: center;
+                background: #e67317;
+                color: #fff;
+              "
+              type="submit"
+            >
+              CONTACTS US
+            </button>
+          </div>
+        </form>
+        <!-- <h2
+          data-aos="fade-up"
+          style="color: #000; margin-bottom: 20px; text-align: center"
+        >
+          CONTACTS US
+        </h2> -->
         <div style="gap: 20px" class="container">
           <div
             style="
@@ -1039,5 +1173,17 @@
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- ANIMATE END -->
+    <!-- PIXEL -->
+    <script type="text/javascript">
+      $('#Lead').click(function () {
+        var fbqValue = 'submitForm';
+
+        // Виклик функції fbq
+        fbq('track', 'Lead', { value: fbqValue });
+
+        // Виведення значення fbq в консоль
+        console.log('fbq value:', fbqValue);
+      });
+    </script>
   </body>
 </html>

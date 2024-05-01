@@ -42,7 +42,7 @@
     <meta name="theme-color" content="#ffffff" />
     <!-- font -->
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap");
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap');
     </style>
     <!-- font end -->
     <!-- styles css -->
@@ -56,16 +56,54 @@
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
+          dl = l != 'dataLayer' ? '&l=' + l : '';
         j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-58TX5PTN");
+      })(window, document, 'script', 'dataLayer', 'GTM-58TX5PTN');
     </script>
     <!-- End Google Tag Manager -->
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        'script',
+        'https://connect.facebook.net/en_US/fbevents.js'
+      );
+      fbq('init', '3794373250805751');
+      fbq('track', 'PageView');
+      fbq('track', 'Lead');
+      fbq('track', 'ViewContent');
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=3794373250805751&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
   </head>
 
   <body>
@@ -123,6 +161,24 @@
             <a class="list-contact-link link" href="tel:+610434512759">
               0434 512 759</a
             >
+          </li>
+          <li class="mobile-list-contact__item">
+            <a
+              target="_blank"
+              class="mobile-list-contact__link-phone link"
+              href="https://www.instagram.com/kotov_english?igsh=cGJkam5rdGxrN3h2 "
+            >
+              <img src="./images/svg/instagram-svgrepo-com.svg" alt="instagram"
+            /></a>
+          </li>
+          <li class="mobile-list-contact__item">
+            <a
+              target="_blank"
+              class="mobile-list-contact__link-phone link"
+              href="https://www.facebook.com/profile.php?id=61558093754096"
+            >
+              <img src="./images/svg/facebook-svgrepo-com.svg" alt="facebook"
+            /></a>
           </li>
         </ul>
         <button type="button" class="open-mobile-menu-btn" data-menu-open>
@@ -187,6 +243,24 @@
             </li>
           </ul>
           <ul class="mobile-list-contact list">
+            <li class="mobile-list-contact__item">
+              <a
+                target="_blank"
+                class="mobile-list-contact__link-phone link"
+                href="https://www.instagram.com/kotov_english?igsh=cGJkam5rdGxrN3h2 "
+              >
+                <img
+                  src="./images/svg/instagram-svgrepo-com.svg"
+                  alt="instagram"
+              /></a>
+              <a
+                target="_blank"
+                class="mobile-list-contact__link-phone link"
+                href="https://www.facebook.com/profile.php?id=61558093754096"
+              >
+                <img src="./images/svg/facebook-svgrepo-com.svg" alt="facebook"
+              /></a>
+            </li>
             <li class="mobile-list-contact__item">
               <a
                 class="mobile-list-contact__link-phone link"
@@ -339,10 +413,76 @@
       >
         <h2
           data-aos="fade-up"
-          style="color: #000; margin-bottom: 20px; text-align: center"
+          style="
+            color: #000;
+            margin-bottom: 20px;
+            text-align: center;
+            visibility: hidden;
+          "
         >
           CONTACTS US
         </h2>
+        <form
+          action="./forms/thank-you.php"
+          method="post"
+          role="form"
+          class="php-email-form"
+        >
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input
+                type="text"
+                name="user-name"
+                class="form-control"
+                id="name"
+                placeholder="Your Name"
+                required
+              />
+            </div>
+            <div class="col-md-6 form-group mt-md-0">
+              <input
+                type="tel"
+                class="form-control"
+                name="user-phone"
+                id="phone"
+                placeholder="Your phone"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group mt-3">
+            <textarea
+              style="resize: none"
+              class="form-control"
+              name="user-comment"
+              rows="5"
+              placeholder="Message"
+            ></textarea>
+          </div>
+          <div class="text-center">
+            <button
+              id="Lead"
+              class="button-active hero-btn button link btn_link link_contact"
+              style="
+                padding: 5px 10px;
+                margin-bottom: 20px;
+                text-align: center;
+                background: #e67317;
+                color: #fff;
+              "
+              type="submit"
+            >
+              CONTACTS US
+            </button>
+          </div>
+        </form>
+        <!-- <h2
+          data-aos="fade-up"
+          style="color: #000; margin-bottom: 20px; text-align: center"
+        >
+          CONTACTS US
+        </h2> -->
         <div style="gap: 20px" class="container">
           <div
             style="
@@ -448,6 +588,7 @@
           </div>
           <div data-aos="fade-up" class="look1">
             <iframe
+              title="map"
               class="map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.587526284133!2d151.2135682!3d-33.926013999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12b1992ca0241d%3A0x5f3cd9e2a59efe4!2zMyBGbG9yZW5jZSBBdmUsIEVhc3RsYWtlcyBOU1cgMjAxOCwg0JDQstGB0YLRgNCw0LvRltGP!5e0!3m2!1suk!2sua!4v1699806900615!5m2!1suk!2sua"
               style="border: 0"
@@ -525,6 +666,19 @@
         once: false,
       });
     </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- ANIMATE END -->
+    <!-- PIXEL -->
+    <script type="text/javascript">
+      $('#Lead').click(function () {
+        var fbqValue = 'submitForm';
+
+        // Виклик функції fbq
+        fbq('track', 'Lead', { value: fbqValue });
+
+        // Виведення значення fbq в консоль
+        console.log('fbq value:', fbqValue);
+      });
+    </script>
   </body>
 </html>
