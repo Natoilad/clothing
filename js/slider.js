@@ -2,7 +2,7 @@ const slides = document.querySelectorAll('.slide');
 const next = document.querySelector('#next');
 const prev = document.querySelector('#prev');
 const auto = true;
-const intervalTime = 3000;
+const intervalTime = 13000;
 let slideInterval;
 
 // Next Slide Function
