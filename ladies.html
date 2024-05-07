@@ -90,7 +90,6 @@
       );
       fbq('init', '3794373250805751');
       fbq('track', 'PageView');
-      fbq('track', 'Lead');
       fbq('track', 'ViewContent');
     </script>
     <noscript
@@ -457,7 +456,6 @@
           </div>
           <div class="text-center">
             <button
-              id="Lead"
               class="button-active hero-btn button link btn_link link_contact"
               style="
                 padding: 5px 10px;
@@ -664,16 +662,14 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- ANIMATE END -->
     <!-- PIXEL -->
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       $('#Lead').click(function () {
         var fbqValue = 'submitForm';
 
-        // Виклик функції fbq
         fbq('track', 'Lead', { value: fbqValue });
 
-        // Виведення значення fbq в консоль
         console.log('fbq value:', fbqValue);
       });
-    </script>
+    </script> -->
   </body>
 </html>

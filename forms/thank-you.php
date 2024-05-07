@@ -3,7 +3,7 @@ $name = $_POST['user-name'];
 $tel = $_POST['user-phone'];
 $text = $_POST['user-comment'];
 
-$to = "olegt333@gmail.com";
+$to = "clothing-alterations.com@ukr.net";
 $date = date("d.m.Y");
 $time = date("h:i");
 $subject = "Заявка з сайту clothing-alterations.com";
