@@ -1,0 +1,27 @@
+.gallery {
+  border-bottom: 10px solid #6c7073;
+  padding-bottom: 200px;
+  background-image: url(../images/bg/gallery_bg.jpg);
+  background: {
+    size: cover;
+    repeat: no-repeat;
+    position: center;
+    color: #2f303a;
+  }
+  text-align: center;
+
+  &_title {
+    font-family: 'Montserrat';
+    @include font(26px, 500);
+    font-style: normal;
+    line-height: 140%;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &_text {
+    font-family: 'Montserrat';
+    max-width: 450px;
+    margin: 20px auto;
+    margin-bottom: 50px;
+  }
+}

@@ -1,0 +1,133 @@
+.mobile-menu {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 25, 62, 0.95);
+  // background: rgba(86, 92, 95, 1);
+  backdrop-filter: blur(10px);
+  transform: translateY(-1500px);
+  pointer-events: none;
+  overflow-y: hidden;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.mobile-menu-list {
+  padding-top: 30px;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.mobile-menu__link {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+  color: var(--primery-text-color);
+}
+
+.mobile-menu__container {
+  height: 100%;
+  position: relative;
+  padding-left: 40px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  border: none;
+  padding: 0;
+  line-height: 0;
+  background-color: transparent;
+}
+
+.mobile-menu__close-icon {
+  width: 50px;
+  height: 50px;
+  scale: 1.2;
+  fill: var(--brend-color);
+  transition: fill var(--transition-dur-fun);
+
+  .mobile-menu__close-btn:hover &,
+  .mobile-menu__close-btn:focus & {
+    fill: var(--brend-color);
+  }
+}
+
+.mobile-menu {
+  transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0px);
+  .header-header {
+    backdrop-filter: none !important;
+  }
+}
+
+.current {
+  color: var(--brend-color);
+}
+
+.mobile-list-contact {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.mobile-list-contact__link-phone {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--primery-text-color);
+}
+
+@media screen and (max-width: 360px) {
+  .mobile-list-contact__link-phone {
+    font-size: 24px;
+  }
+}
+.logo-up_icon {
+  position: relative;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  @include tablet {
+    scale: 1.2;
+    margin-right: 20px;
+  }
+  @include desktop {
+    margin-right: 100px;
+  }
+}
+
+.mobile-list-contact__link-mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
+}
+
+.mobile-menu__item {
+  margin-bottom: 20px;
+}
+.mobile-list-contact__item {
+  margin-bottom: 10px;
+}

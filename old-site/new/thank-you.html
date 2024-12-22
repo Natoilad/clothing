@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank you page</title>
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        'script',
+        'https://connect.facebook.net/en_US/fbevents.js'
+      );
+      fbq('init', '3794373250805751');
+      fbq('track', 'PageView');
+      fbq('track', 'Lead');
+      fbq('track', 'ViewContent');
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=3794373250805751&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+  </head>
+  <body>
+    <p
+      style="
+        color: #e67317;
+        font-size: 2em;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 300px;
+      "
+    >
+      Your message has been sent. Thank you!
+      <a
+        class="btn btn"
+        id="Lead"
+        style="text-decoration: none; color: #e67317"
+        href="index.html"
+      >
+        Back to home
+      </a>
+    </p>
+    <script>
+      // Редірект через 10 секунд
+      setTimeout(function () {
+        window.location.href = 'index.html';
+      }, 10000);
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- PIXEL -->
+    <script type="text/javascript">
+      $('#Lead').click(function () {
+        var fbqValue = 'submitForm';
+
+        // Виклик функції fbq
+        fbq('track', 'Lead', { value: fbqValue });
+
+        // Виведення значення fbq в консоль
+        console.log('fbq value:', fbqValue);
+      });
+    </script>
+  </body>
+</html>

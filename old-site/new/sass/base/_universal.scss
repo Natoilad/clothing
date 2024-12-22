@@ -1,0 +1,26 @@
+@media screen and (min-width: 1200px) {
+  .cont_link:hover {
+    scale: 1.1;
+  }
+  .list-contact-link:hover {
+    color: var(--brend-color);
+  }
+}
+.btn_link {
+  color: #000;
+}
+.link_contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.look_title {
+  color: #000;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.look_p {
+  font-size: 14px !important;
+  text-align: center !important;
+}
